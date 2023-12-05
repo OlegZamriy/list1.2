@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Domain">
+      <UniqueIdentifier>{88ba67cd-d94a-4e64-9e4b-c5daf8a3b483}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Data">
+      <UniqueIdentifier>{006d86a5-b312-43c5-a983-b2f09d059a44}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Presentation">
+      <UniqueIdentifier>{e6c9b149-02aa-4c25-9225-ca54b0d42456}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain\Entity">
+      <UniqueIdentifier>{91697ea3-aa9f-4e51-94c3-ca090b0d44d5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain\Entity\Repository">
+      <UniqueIdentifier>{74dbca54-ea52-4d92-9220-2fe42077277f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Data\DataSource">
+      <UniqueIdentifier>{8362ffef-1e4f-4dea-a4f1-b8cdf7bc38b2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Data\DataSource\Local">
+      <UniqueIdentifier>{7dd388a9-187f-4091-a944-e6991f5cdbc0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Presentation\Functions">
+      <UniqueIdentifier>{b38b619f-bb8a-4757-87b5-a7cb85bfb20b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Presentation\Screens">
+      <UniqueIdentifier>{5430f7cc-7073-472d-996d-e16cb73746fd}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Repository.cpp">
+      <Filter>Domain\Entity\Repository</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Presentation\Screens</Filter>
+    </ClCompile>
+    <ClCompile Include="Functions.cpp">
+      <Filter>Presentation\Functions</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Constants.h">
+      <Filter>Domain\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="Repository.h">
+      <Filter>Domain\Entity\Repository</Filter>
+    </ClInclude>
+    <ClInclude Include="Data.h">
+      <Filter>Data\DataSource\Local</Filter>
+    </ClInclude>
+    <ClInclude Include="Functions.h">
+      <Filter>Presentation\Functions</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
