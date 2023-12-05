@@ -28,7 +28,7 @@ void TaskRepository::editTask(const std::string& title, const Task& newTask) {
             task = newTask;
             std::cout << "Task edited successfully!\n";
             return;
-        }
+        } 
     }
 
     std::cout << "Task not found.\n";
