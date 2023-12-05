@@ -2,6 +2,8 @@
 #include <algorithm>
 #include "Functions.h"
 #include "Constants.h"
+#include <iomanip>
+
 
 void TaskManager::addTask() {
     Task newTask;
@@ -75,27 +77,32 @@ void TaskManager::displayTasksByPriority() {
     displayTasks(tasksByPriority);
 }
 
-void TaskManager::displayTasks(const std::vector<Task>& tasks) {
+void TaskManager::displayTasksGraphical() {
+    system("cls"); 
+
+    std::vector<Task> tasks = taskRepository.getTasksByPriority();
+
     if (tasks.empty()) {
         std::cout << "No tasks to display.\n";
     }
     else {
         for (const auto& task : tasks) {
-            std::cout << "Title: " << task.title << "\n";
-            std::cout << "Priority: " << task.priority << "\n";
-            std::cout << "Description: " << task.description << "\n";
-            std::cout << "Due Date and Time: " << task.dateTime << "\n";
-            std::cout << "--------------------------\n";
+            drawTask(task);
+            std::cout << "\n";
         }
     }
+
+    std::cout << "Press Enter to continue...";
+    std::cin.ignore();
 }
 
-void displayMenu() {
-    std::cout << "1. Add Task\n";
-    std::cout << "2. Delete Task\n";
-    std::cout << "3. Edit Task\n";
-    std::cout << "4. Search Tasks\n";
-    std::cout << "5. Display Tasks by Time\n";
-    std::cout << "6. Display Tasks by Priority\n";
-    std::cout << "7. Exit\n";
+void TaskManager::displayTasks(const std::vector<Task>& tasks) {
+    // ... (existing code)
+}
+
+void TaskManager::drawTask(const Task& task) {
+    std::cout << std::left << std::setw(20) << task.title << " | ";
+    std::cout << std::left << std::setw(10) << "Priority: " << task.priority << " | ";
+    std::cout << std::left << std::setw(30) << "Description: " << task.description << " | ";
+    std::cout << std::left << std::setw(20) << "Due Date: " << task.dateTime;
 }

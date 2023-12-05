@@ -4,7 +4,8 @@
 #include <string>
 #include <vector>
 
-struct Task {
+struct Task 
+{
     std::string title;
     int priority;
     std::string description;
