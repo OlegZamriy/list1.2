@@ -129,6 +129,7 @@
   <ItemGroup>
     <ClCompile Include="Functions.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Menu.cpp" />
     <ClCompile Include="Repository.cpp" />
   </ItemGroup>
   <ItemGroup>

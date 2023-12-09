@@ -20,5 +20,6 @@ private:
 };
 
 void displayMenu();
+void displayMainMenu(TaskManager& taskManager); 
 
-#endif // FUNCTIONS_H
+#endif 
